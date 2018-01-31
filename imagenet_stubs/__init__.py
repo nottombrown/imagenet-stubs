@@ -1,7 +1,9 @@
 import glob
 import os
 
-images_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'images'))
+root_dir = os.path.dirname(os.path.abspath(__file__))
+
+images_dir = os.path.join(root_dir, 'images')
 
 def get_image_paths():
     rel_paths = glob.glob(images_dir + "/*")
